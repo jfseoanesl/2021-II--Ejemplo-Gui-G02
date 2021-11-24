@@ -78,7 +78,7 @@ public class ArchivoGoleadoresTexto implements IArchivo {
         f.setEquipo(linea[2]);
         f.setNoGoles(Integer.valueOf(linea[3]));
         f.setNoPartidos(Integer.valueOf(linea[4]));
-        f.setPromedioGoles(Double.valueOf(linea[5]));
+        f.setPromedioGoles();
         return f;
     }
     

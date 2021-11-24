@@ -113,8 +113,8 @@ public class Futbolista implements Serializable {
     /**
      * @param promedioGoles the promedioGoles to set
      */
-    public void setPromedioGoles(double promedioGoles) {
-        this.promedioGoles = promedioGoles;
+    public void setPromedioGoles() {
+        this.promedioGoles = (double)this.noGoles/this.noPartidos;
     }
     
     public String getDatosArchivoTexto(){

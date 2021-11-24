@@ -18,9 +18,9 @@ public class RegistroGoleadores {
     private IArchivo datos; //
 
     public RegistroGoleadores() {
-        //this.datos = new ArchivoGoleadoresTexto();
+        this.datos = new ArchivoGoleadoresTexto();
         //this.datos = new ListaArrayList();
-        this.datos = new ArchivoGoleadoresBin();
+        //this.datos = new ArchivoGoleadoresBin();
     }
 
     /**
@@ -39,6 +39,9 @@ public class RegistroGoleadores {
     
     
     public boolean registrar(Futbolista f) throws IOException{
+        if(f.getCc()==null || f.getCc().trim().length()==0)
+            throw new NullPointerException("La cedula no debe estar vacia");
+        
         return this.datos.escribir(f);
     }
     
